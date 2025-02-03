@@ -33,7 +33,7 @@ class TodoListActivity : AppCompatActivity(), TodoClickListener
         todoViewModel.todoItem.observe(this){
             binding.todoListRecyclerView.apply {
                 layoutManager = LinearLayoutManager(applicationContext)
-                adapter = TodoAdapter(it, mainActivity)
+                adapter = it?.let { it1 -> TodoAdapter(it1, mainActivity) }
             }
         }
     }
