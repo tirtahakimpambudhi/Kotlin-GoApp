@@ -9,7 +9,7 @@ import java.util.*
 
 class TodoViewModel: ViewModel()
 {
-    var todoItem = MutableLiveData<MutableList<TodoEntity>>()
+    var todoItem = MutableLiveData<MutableList<TodoEntity>?>()
 
     init {
         todoItem.value = mutableListOf()
