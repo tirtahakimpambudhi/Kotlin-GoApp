@@ -71,8 +71,10 @@
             android:layout_height="wrap_content"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="More options"
+            app:layout_constraintWidth="48dp"
+            app:layout_constraintHeight="48dp"
             android:padding="8dp"
-            android:src="@drawable/ic_more_vert"
+            android:src="@drawable/baseline_menu_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
