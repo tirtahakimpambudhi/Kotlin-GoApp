@@ -1,66 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
-android:id="@+id/taskCellContainer"
-xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="90dp"
-app:cardCornerRadius="5dp"
-android:layout_margin="5dp"
-xmlns:app="http://schemas.android.com/apk/res-auto">
-
-<LinearLayout
-    android:orientation="horizontal"
+    android:id="@+id/taskCellContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="90dp"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:gravity="center_vertical">
 
-        <ImageButton
-            android:id="@+id/completeButton"
-            android:layout_width="wrap_content"
+        <!-- Complete Button on the left -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp">
+
+            <ImageButton
+                android:id="@+id/completeButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/checkbox"
+                android:src="@drawable/unchecked_24" />
+        </FrameLayout>
+
+        <!-- Content Container -->
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="@android:color/transparent"
-            android:contentDescription="@string/checkbox"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:src="@drawable/unchecked_24" />
-        <ImageButton
-            android:id="@+id/deleteButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="15dp"
-            android:backgroundTint="@android:color/transparent"
-            android:contentDescription="@string/checkbox"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:src="@drawable/trash" />
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="8dp">
+
+            <!-- Task Name -->
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/place_holder"
+                style="@style/TextAppearance.AppCompat.Title" />
+
+            <!-- Due Time -->
+            <TextView
+                android:id="@+id/dueTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/place_holder"
+                style="@style/TextAppearance.AppCompat.Title" />
+        </LinearLayout>
+
+        <!-- Delete Button on the right -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp">
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/checkbox"
+                android:src="@drawable/trash" />
+        </FrameLayout>
+
     </LinearLayout>
-
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/name"
-        android:text="@string/place_holder"
-        style="@style/TextAppearance.AppCompat.Title"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        />
-
-    <TextView
-        android:layout_marginHorizontal="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dueTime"
-        android:text="@string/place_holder"
-        style="@style/TextAppearance.AppCompat.Title"
-        android:layout_gravity="center"
-        />
-
-</LinearLayout>
 
 </androidx.cardview.widget.CardView>
