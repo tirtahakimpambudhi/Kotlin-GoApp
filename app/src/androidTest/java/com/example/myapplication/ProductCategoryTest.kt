@@ -1,7 +1,7 @@
 package com.example.myapplication
 
 import android.content.Context
-import android.util.Log
+//import android.util.Log
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -42,7 +42,7 @@ class ProductCategoryTest {
     @Test
     fun insert() = runBlocking {
         try {
-            val product = Product(0,"Test Product", 10.0, "image.png", "description", System.currentTimeMillis(), System.currentTimeMillis())
+            val product = Product(0,"Test Product", 10.0, 10,"image.png", "description", System.currentTimeMillis(), System.currentTimeMillis())
             val category = Category(0,"Test Category")
             productCategoryDao.insertProduct(product)
             productCategoryDao.insertCategory(category)
