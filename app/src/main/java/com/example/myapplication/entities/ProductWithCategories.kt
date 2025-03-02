@@ -5,11 +5,11 @@ import androidx.room.Junction
 import androidx.room.Relation
 // ISSUE
 data class ProductWithCategories(
-    @Embedded val product: Product,
+    @Embedded var product: Product,
     @Relation(
         parentColumn = "productId",
         entityColumn = "categoryId",
         associateBy = Junction(ProductCategoryCrossRef::class)
     )
-    val categories: List<Category>
+    var categories: List<Category>
 )
