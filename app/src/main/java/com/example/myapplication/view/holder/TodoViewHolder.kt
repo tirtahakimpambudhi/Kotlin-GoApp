@@ -1,5 +1,6 @@
 package com.example.myapplication.view.holder
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Paint
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +17,7 @@ class TodoViewHolder(
 {
     private val timeFormat = DateTimeFormatter.ofPattern("HH:mm")
 
+    @SuppressLint("SetTextI18n")
     fun bindTodo(todoItem: TodoEntity)
     {
         binding.name.text = todoItem.name
