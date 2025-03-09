@@ -7,7 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".ProductActivity">
 
-    <!-- Toolbar -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -26,7 +32,6 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <!-- Search Bar -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -46,10 +51,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Product List -->
-
-    <!-- Empty State -->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvProducts"
         android:layout_width="match_parent"
@@ -58,10 +59,7 @@
         android:clipToPadding="false"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchLayout"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="-30dp"
-        tools:listitem="@layout/product_item" />
+        app:layout_constraintTop_toBottomOf="@id/searchLayout" />
 
     <LinearLayout
         android:id="@+id/emptyState"
@@ -89,7 +87,6 @@
 
     </LinearLayout>
 
-    <!-- FAB for adding new product -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddProduct"
         android:layout_width="wrap_content"
@@ -101,4 +98,3 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
