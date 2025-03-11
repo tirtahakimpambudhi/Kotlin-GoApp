@@ -66,4 +66,12 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="product_name">Product Name</string>
+    <string name="description">Description</string>
+    <string name="stock">Stock</string>
+    <string name="category">Category</string>
+    <string name="save_product">Save Product</string>
+    <string name="product_photo">Product Photo</string>
+    <string name="edit_product">Edit Product</string>
+    <string name="add_product">Add Product</string>
 </resources>
