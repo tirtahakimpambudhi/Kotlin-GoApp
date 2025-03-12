@@ -16,6 +16,8 @@ googleAndroidLibrariesMapsplatformSecretsGradlePlugin = "2.0.1"
 playServicesMaps = "18.1.0"
 navigationFragmentKtx = "2.6.0"
 navigationUiKtx = "2.6.0"
+coreKtxVersion = "1.6.1"
+junitKtx = "1.2.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,6 +34,8 @@ qrgenerator = { module = "com.github.androidmads:QRGenerator", version.ref = "qr
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+core-ktx = { group = "androidx.test", name = "core-ktx", version.ref = "coreKtxVersion" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
